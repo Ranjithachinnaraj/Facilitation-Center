@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Homepage</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #990000;
+}
+.style2 {font-family: "Times New Roman", Times, serif; font-size: 16px; font-weight: bold; color: #990000; }
+.style6 {color: #0000FF; font-weight: bold; }
+-->
+</style>
+</head>
+
+<body style="background: #79A6CF">
+<table width="1243" border="1">
+  <tr>
+    <td colspan="6"><img src="static/images/123.JPG" width="1286" height="305" /></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center"><a href="{{ url_for('adminhome') }}">Home</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('Addauthority') }}">Authority</a></div>
+    </td>
+ <td>
+      <div align="center"><a href="{{ url_for('viewcomplaint') }}">View Complaints </a></div>
+    </td>
+     <td>
+      <div align="center"><a href="{{ url_for('updatestatus') }}">Upload Status</a></div>
+    </td>
+
+      <td>
+      <div align="center"><a href="{{ url_for('home') }}">Logout</a></div>
+   </td>
+  <tr>
+    <td colspan="6"><div align="center" class="style1">Welcome to Society Grivence Facilitation Center Website </div></td>
+  </tr>
+  <tr>
+    <form action="{{ url_for('status') }}" method="POST">
+      <td colspan="7"><table width="1286" height="343" bgcolor="#999900">
+      <tbody>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td colspan="3" valign="center"><h2><span style="color:#400">Update Complaint Status</span></h2></td>
+          <td valign="middle">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+        </tr>
+        <tr><td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6">Complaint Id </span></td>
+          <td valign="middle"><input name="tid2" required="required" type="text"  id="tid2" /></td>
+
+        </tr>
+        <tr>
+            <tr><td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6"> Authority Id </span></td>
+          <td valign="middle"><input name="tid3" required="required" type="text"  id="tid3" /></td>
+
+        </tr>
+        <tr>
+<tr><td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="middle"><span class="style6">Area</span></td>
+          <td valign="middle"><input name="tid6" required="required" type="text"  id="tid6" /></td>
+        </tr>
+        <tr>
+            <tr><td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+                  <td valign="top"><span class="style6">Status </span></td>
+                    <td valign="top"><select name="tid5a" required="required" type="text"  id="tid5a" />
+                        <option selected="selected">- Select -</option>
+                        <option value="Pending">Pending</option>
+                        <option value="Completed">Completed</option>
+                                          </td>
+        </tr>
+        <tr>
+            <tr><td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="middle"><span class="style6">Description</span></td>
+          <td valign="middle"><input name="tid8" required="required" type="textarea"  id="tid8" /></td>
+        </tr>
+     <tr>
+          <td></td>
+          <td></td>
+         <br></br>
+          <td></td>
+
+          <td valign="middle"><input type="submit" name="ok" value="Submit"/>
+              <input type="submit" name="ok3" value="Reset"/></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+
+        </tr>
+        <tr>
+          <td height="92"></td>
+          <td colspan="5"></td>
+        </tr>
+        <tr>
+          <td height="2"></td>
+        </tr>
+      </tbody>
+    </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="6"><div align="center" class="style2">Copyrights @ 2022 Reserved</div></td>
+  </tr>
+</table>
+</body>
+</html>

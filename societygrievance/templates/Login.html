@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Homepage</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #990000;
+}
+.style2 {font-family: "Times New Roman", Times, serif; font-size: 16px; font-weight: bold; color: #990000; }
+-->
+</style>
+</head>
+
+<body style="background: #79A6CF">
+<table width="1243" border="1">
+  <tr>
+    <td colspan="6"><img src="static/images/123.JPG" width="1500" height="305" /></td>
+  </tr>
+  <tr>
+    <td>
+      <div align="center"><a href="{{ url_for('home') }}">Home</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('about') }}">About Us</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('service') }}">Services</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('contact') }}">Contact Us</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('register') }}">Register</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('login') }}">Login</a></div>
+   </td>
+  </tr>
+  <tr>
+    <td colspan="6"><div align="center" class="style1">Welcome to Society Grievance Facilitation Center Website </div></td>
+  </tr>
+  <tr>
+      <form action="{{ url_for('checklogin') }}" method="POST">
+    <td colspan="7"><div>
+      <fieldset style="background-color:#79A6CF; width:97%; margin:10px;" align="center">
+      <table width="500" height="150">
+        <tbody>
+           <table align="center" width="900" height="294" >
+                  <tr>
+                    <td colspan="2"><div align="center" class="style3">Admin/ User Login </div></td>
+                  </tr>
+                  <tr>
+                    <td><span class="style3">User Name </span></td>
+                    <td><input type="text" name="tid">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="style3">Password</span></td>
+                    <td><input type="password" name="password">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><span class="style3">User Role </span></td>
+                    <td><select name="utype">
+                        <option selected="selected">- Select -</option>
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
+                                          </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><div align="center">
+                        <input type="submit" name="Submit" value="Login">
+                    </div></td>
+                    <td><div align="center">
+                        <input type="submit" name="Submit2" value="Cancel">
+                    </div></td>
+                  </tr>
+
+        </tbody>
+      </table>
+        </fieldset>
+    </div>
+    </td>
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+</body>
+</html>

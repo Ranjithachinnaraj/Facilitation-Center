@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Homepage</title>
+    <script>
+function validateform() {
+    pattern = "^[0-9#]+$"
+    var name = document.reg_form.tid3.value;
+    var cid = document.reg_form.tid2.value;
+    var number= document.reg_form.tid4.value;
+
+    if (name == null || name == " ") {
+        alert("Name can't be blank");
+        return false;
+    } else if (cid == null || cid == "" || pattern.compile(cid)) {
+        alert("Cid can't be blank should be numbers");
+        return false;
+    }
+    else if (number == null || number == "" || pattern.compile(number)) {
+        alert("Phone Number  can't be blank should be numbers");
+        return false;
+    }
+v
+}
+</script>
+<style type="text/css">
+
+<!--
+.style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #990000;
+}
+.style2 {font-family: "Times New Roman", Times, serif; font-size: 16px; font-weight: bold; color: #990000; }
+.style6 {color: #0000FF; font-weight: bold; }
+-->
+</style>
+</head>
+<body style="background: #79A6CF">
+<table width="1243" border="1">
+  <tr>
+    <td colspan="6"><img src="static/images/123.JPG" width="1500" height="305" /></td>
+  </tr>
+  <tr>
+   <td>
+      <div align="center"><a href="{{ url_for('home') }}">Home</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('about') }}">About Us</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('service') }}">Services</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('contact') }}">Contact Us</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('register') }}">Register</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('login') }}">Login</a></div>
+   </td>
+  </tr>
+  <tr>
+
+  </tr>
+  <tr>
+      <form action="{{ url_for('register_details') }}" method="POST" name="reg_form" onsubmit="return validateform()">
+    <table width="1500" height="343" bgcolor="#999900">
+      <tbody>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6">Citizen  Id </span></td>
+          <td valign="middle"><input name="tid2"  type="text"  id="tid2" /></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle"><span class="style6">Age</span></td>
+          <td valign="middle"><input name="tid5"  type="text"  id="tid5" /></td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6">Citizen  Name </span></td>
+          <td valign="middle"><input name="tid3" type="text"  id="tid3" /></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle"><span class="style6">Gender</span></td>
+          <td valign="middle"><input type="radio" name="ct1" value="Male">
+            Male
+            <input type="radio" name="ct1" value="Female">
+            Female</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6">Phone Number </span></td>
+          <td valign="middle"><input name="tid4"  type="text"  id="tid4" /></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle"><span class="style6">Area</span></td>
+          <td valign="middle"><input name="tid7" required="required" type="text"  id="tid7" /></td>
+        </tr>
+        <tr>
+
+          <td valign="top">&nbsp;</td>
+          <td valign="top"><span class="style6">Email ID </span></td>
+          <td valign="middle"><input name="tid6" required="required" type="text"  id="tid6"  placeholder="example@gmail.com"/></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+        </tr>
+        <tr>
+          <td valign="top">&nbsp;</td>
+          <td valign="top">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+        </tr>
+        <tr>
+          <td width="23" valign="top">&nbsp;</td>
+          <td width="131" valign="top"><span class="style6">
+            <label>Username</label>
+          </span></td>
+          <td width="146" valign="middle"><input name="tid" required="required" type="text"  id="tid" />
+              <p>&nbsp; </p></td>
+          <td width="42" valign="middle">&nbsp;</td>
+          <td width="115" valign="middle"><span class="style6">Password</span></td>
+          <td width="280" valign="middle"><input type="password" name="password" class="login_text" id="password" /></td>
+          <br />
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td valign="middle"><input type="submit" name="ok" value="Submit"/>
+              <input type="submit" name="ok3" value="Cancel"/></td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle">&nbsp;</td>
+          <td valign="middle"><img src="static/images/download (1).jpg" alt="reg" width="110" height="59" /></td>
+        </tr>
+        <tr>
+          <td height="92"></td>
+          <td colspan="5"></td>
+        </tr>
+        <tr>
+          <td height="2"></td>
+        </tr>
+      </tbody>
+    </table>
+      </form>
+    </td>
+  </tr>
+  <tr>
+
+  </tr>
+</table>
+</body>
+</html>

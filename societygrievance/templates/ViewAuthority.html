@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Homepage</title>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: #990000;
+}
+.style2 {font-family: "Times New Roman", Times, serif; font-size: 16px; font-weight: bold; color: #990000; }
+.style3 {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 18px;
+	color: #0000FF;
+}
+-->
+</style>
+</head>
+
+<body style="background: #79A6CF">
+<table width="1243" border="1">
+  <tr>
+    <td colspan="7"><img src="static/images/123.JPG" width="1500" height="305" /></td>
+  </tr>
+  <tr>
+     <td>
+      <div align="center"><a href="{{ url_for('home') }}">Home</a></div>
+    </td>
+    <td>
+      <div align="center"><a href="{{ url_for('viewauthority') }}">View Authority</a></div>
+    </td>
+       <td>
+      <div align="center"><a href="{{ url_for('complaint') }}">Add Complaint</a></div>
+    </td>
+      <td>
+      <div align="center"><a href="{{ url_for('viewstatus') }}">View Status</a></div>
+    </td>
+     <td>
+      <div align="center"><a href="{{ url_for('home') }}">Logout</a></div>
+   </td>
+<tr>
+
+  </tr>
+
+  <tr>
+    <h2 align="center">Authority Details</h2><br><br>
+              <div  >
+  <table width="80%"align="center">
+                 <tr>
+              <th>Authority  Id</th>
+	<th>Age</th>
+	<th>Name</th>
+	<th>Gender</th>
+              <th>Contact</th>
+              <th>Area</th>
+              <th>Email ID</th>
+              <th>Department</th>
+                     <th>Designation</th>
+                     <th>Authority Level</th>
+
+          </tr>
+
+                {% for row in authoritylist%}
+                <tr>
+                    <td>{{row.0}}</td>
+                    <td>{{row.1}}</td>
+                    <td>{{row.2}}</td>
+                    <td>{{row.3}}</td>
+	                <td>{{row.4}}</td>
+                    <td>{{row.5}}</td>
+                    <td>{{row.6}}</td>
+                    <td>{{row.7}}</td>
+                <td>{{row.8}}</td>
+                <td>{{row.9}}</td>
+
+
+                </tr>
+ {% endfor  %}
+</table>
+              </div>
+  <tr>
+
+  </tr>
+</table>
+</body>
+</html>
